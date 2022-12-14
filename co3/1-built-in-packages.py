@@ -1,20 +1,21 @@
 import os
 import math
 
+path = os.getcwd()
 
-if (os.path.exists('C:/NewFolder') == False):
-    os.mkdir("C:/NewFolder")
-    print("Folder C:/NewFolder created.")
+if (os.path.exists(path + '/NewFolder') == False):
+    os.mkdir(path + '/NewFolder')
+    print('Folder NewFolder created.')
 else:
-    print("NewFolder already exists.")
+    print('NewFolder already exists.')
 
-if (os.path.exists('C:/NewFolder/newfile.txt')):
-    print("NewFile.txt already exists") 
-    f = open("C:/NewFolder/newfile.txt", "w")
+if (os.path.exists(path + '/NewFolder')):
+    print('NewFile.txt already exists')
+    f = open(path + '/NewFolder', 'w')
 else:
-    f = open("C:/NewFolder/newfile.txt", "x")
-    
-    
+    f = open(path + '/NewFolder/newfile.txt', 'x')
+
+
 c = math.sqrt(64)
 f.write(str(c))
 f.close()
