@@ -29,4 +29,4 @@ if (area1 > area2):
 elif (area2 > area1):
     print("Rectangle 2 is larger.\n")
 else:
-    print("Both rectablges are equal in area.\n")
+    print("Both rectangles are equal in area.\n")
