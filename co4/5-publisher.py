@@ -11,3 +11,5 @@ class Python(Book):
     def __init__(self, price, pages):
         self.price = price
         self.pages = pages
+        
+book1 = 
