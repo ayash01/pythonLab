@@ -9,12 +9,11 @@ if (os.path.exists(path + '/NewFolder') == False):
 else:
     print('NewFolder already exists.')
 
-if (os.path.exists(path + '/NewFolder')):
+if (os.path.exists(path + '/NewFolder/newfile.txt')):
     print('NewFile.txt already exists')
-    f = open(path + '/NewFolder/newFile.txt', 'x')
+    f = open(path + '/NewFolder/newFile.txt', 'w')
 else:
     f = open(path + '/NewFolder/newFile.txt', 'x')
-
 
 c = math.sqrt(64)
 f.write(str(c))
