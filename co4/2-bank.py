@@ -1,5 +1,5 @@
 import os
-import math
+import random
 
 
 class bankAccount:
@@ -22,16 +22,20 @@ class bankAccount:
 
 os.system('cls||clear')
 
-accNo = int(input("Enter account number:"))
+#accNo = int(input("Enter account number:"))
+accNo = random.randrange(100000000000, 999999999999)
 name = input("Enter account holder name:")
+
 accType = input("Enter account type:")
-bal = int(input("Enter initial amount:"))
+
+bal = -1
+while bal <= 0:
+    bal = float(input("Enter initial amount:"))
 
 if bal >= 0:
     acc1 = bankAccount(accNo, name, accType, bal)
     while True:
-        ch = int(input(
-            "\nWhat do you want to do?: \n1. Deposit\n2. Withdraw\n3. Check Balance\n4. View account details\n\n0. Exit\n\n-> "))
+        ch = int(input("\nWhat do you want to do?: \n1. Deposit\n2. Withdraw\n3. Check Balance\n4. View account details\n\n0. Exit\n\n-> "))
         if ch == 1:
             amt = int(input("\nEnter amount to deposit: "))
             if (amt <= 0):
@@ -51,7 +55,8 @@ if bal >= 0:
         elif ch == 3:
             print("\nCurrent balance:", acc1.bal)
         elif ch == 4:
-            print("\nAccount Number: ", acc1.accNo, "\n"+"Account Holder: ", acc1.name,"\n"+"Account Type: ", acc1.accType, "\n"+"Current Balance: ", acc1.bal)
+            print("\nAccount Number: ", acc1.accNo, "\n"+"Account Holder: ", acc1.name,
+                  "\n"+"Account Type: ", acc1.accType, "\n"+"Current Balance: ", acc1.bal)
         elif ch == 0:
             os.system('cls||clear')
             break
