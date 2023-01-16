@@ -1,6 +1,15 @@
 import os
 
-fpath = os.path.expanduser('~')+'/Desktop'
+path = "./"
 
-f = open()
+if (os.path.exists(path+'file.txt')):
+    list = []
+    f = open(path+'file.txt', "r")
+    for line in f:
+        list.append(line)
+    print(list)
+    f.close()
+else:
+    print("\nFile not found\n")
+
 

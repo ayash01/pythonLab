@@ -12,4 +12,6 @@ class Python(Book):
         self.price = price
         self.pages = pages
         
-book1 = 
+book1 = Python(200, 37);
+
+print("\nPython:\nPrice: "+str(book1.price)+"\nPages: "+str(book1.pages)+"\n")
