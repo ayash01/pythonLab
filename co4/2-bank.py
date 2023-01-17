@@ -22,7 +22,6 @@ class bankAccount:
 
 os.system('cls||clear')
 
-#accNo = int(input("Enter account number:"))
 accNo = random.randrange(100000000000, 999999999999)
 name = input("Enter account holder name:")
 
@@ -35,7 +34,7 @@ while bal <= 0:
 if bal >= 0:
     acc1 = bankAccount(accNo, name, accType, bal)
     while True:
-        ch = int(input("\nWhat do you want to do?: \n1. Deposit\n2. Withdraw\n3. Check Balance\n4. View account details\n\n0. Exit\n\n-> "))
+        ch = int(input("\nPlease select an option: \n1. Deposit\n2. Withdraw\n3. Check Balance\n4. View account details\n\n0. Exit\n\n-> "))
         if ch == 1:
             amt = int(input("\nEnter amount to deposit: "))
             if (amt <= 0):
@@ -61,6 +60,6 @@ if bal >= 0:
             os.system('cls||clear')
             break
         else:
-            print("\nInvalid input. Please try again.")
+            print("\nInvalid input. Please select a valid option.")
 else:
     print("\nInvalid amount\n")
