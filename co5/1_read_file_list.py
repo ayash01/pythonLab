@@ -1,13 +1,17 @@
 import os
 
-path = "./"
+path = os.getcwd()
 
-if (os.path.exists(path+'file.txt')):
+if (os.path.exists(path+'/file.txt')):
     list = []
-    f = open(path+'file.txt', "r")
+
+    f = open(path+'/file.txt', "r")
+
     for line in f:
         list.append(line)
-    print(list)
+
+    print("{}".format(list))
+
     f.close()
 else:
     print("\nFile not found\n")
