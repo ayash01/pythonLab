@@ -2,18 +2,15 @@ import os
 
 path = os.getcwd()
 
-if (os.path.exists(path+'/file.txt')):
-    list = []
+if (os.path.exists('./co5/file.txt')):
 
-    f = open(path+'/file.txt', "r")
+    f = open('./co5/file.txt', "r")
 
-    for line in f:
-        list.append(line)
+    list = [line.strip() for line in f.readlines()]
 
     print("{}".format(list))
 
     f.close()
+
 else:
-    print("\nFile not found\n")
-
-
+    print("\nfile.txt not found\n")
