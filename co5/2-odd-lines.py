@@ -1,20 +1,22 @@
 import os
 
-path = os.getcwd()
+if (os.path.exists('./co5/file.txt')):
+    
+    if (os.path.exists('./co5/file2.txt')):
+        f2 = open('./co5/file2.txt', "w")
+    else:
+        f2 = open('./co5/file2.txt', "x")
 
-if (os.path.exists(path+'/file.txt')):
-    list = []
+    f = open('./co5/file.txt', "r")
+    i = 1
 
-    f = open(path+'/file.txt', "r")
-
-    text = f.readlines()
-
-    for i in range (0, len(text)):
+    for line in f.readlines():
         if i % 2 != 0:
-            list.append(text[i])
+            f2.write(line)
+        i+=1
 
-    print(list)
-
+    print("Odd lines from file.txt written to file2.txt.")
     f.close()
+
 else:
     print("\nFile not found\n")

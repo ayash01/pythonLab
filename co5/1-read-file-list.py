@@ -1,7 +1,5 @@
 import os
 
-path = os.getcwd()
-
 if (os.path.exists('./co5/file.txt')):
 
     f = open('./co5/file.txt', "r")
